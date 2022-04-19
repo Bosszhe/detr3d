@@ -234,6 +234,12 @@ def main():
             if hasattr(datasets[0], 'PALETTE') else None)
     # add an attribute for visualization convenience
     model.CLASSES = datasets[0].CLASSES
+
+
+    print('111111111111111111')
+
+
+    
     train_model(
         model,
         datasets,
@@ -245,4 +251,5 @@ def main():
 
 
 if __name__ == '__main__':
+    torch.multiprocessing.set_start_method('fork')
     main()
